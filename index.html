@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Card Game - Offline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>UNO Card Game</h1>
+            <button id="restart-btn" class="restart-btn">New Game</button>
+        </div>
+
+        <!-- Game Status -->
+        <div class="game-status">
+            <div class="current-player">Current Player: <span id="current-player-name">Player</span></div>
+            <div class="turn-timer">
+                <div class="timer-label">Time Left:</div>
+                <div class="timer-display" id="timer-display">20</div>
+                <div class="timer-bar">
+                    <div class="timer-progress" id="timer-progress"></div>
+                </div>
+            </div>
+            <div class="game-direction">Direction: <span id="direction">Clockwise</span></div>
+        </div>
+
+        <!-- Bot Players -->
+        <div class="bots-container">
+            <div class="bot-player" id="bot1">
+                <div class="player-name">Bot 1</div>
+                <div class="card-count">Cards: <span class="count">7</span></div>
+                <div class="bot-cards">
+                    <!-- Bot cards (face down) -->
+                </div>
+            </div>
+            <div class="bot-player" id="bot2">
+                <div class="player-name">Bot 2</div>
+                <div class="card-count">Cards: <span class="count">7</span></div>
+                <div class="bot-cards">
+                    <!-- Bot cards (face down) -->
+                </div>
+            </div>
+            <div class="bot-player" id="bot3">
+                <div class="player-name">Bot 3</div>
+                <div class="card-count">Cards: <span class="count">7</span></div>
+                <div class="bot-cards">
+                    <!-- Bot cards (face down) -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Center -->
+        <div class="game-center">
+            <div class="draw-pile">
+                <div class="card card-back" id="draw-pile">
+                    <div class="card-content">UNO</div>
+                </div>
+                <div class="pile-count">Cards: <span id="draw-count">80</span></div>
+            </div>
+            
+            <div class="discard-pile">
+                <div class="card" id="current-card">
+                    <div class="card-content">Start</div>
+                </div>
+                <div class="pile-label">Current Card</div>
+            </div>
+        </div>
+
+        <!-- Player Hand -->
+        <div class="player-container">
+            <div class="player-name">Your Hand</div>
+            <div class="player-hand" id="player-hand">
+                <!-- Player cards will be added here -->
+            </div>
+        </div>
+
+        <!-- Color Picker Modal -->
+        <div id="color-picker-modal" class="modal">
+            <div class="modal-content">
+                <h3>Choose a Color</h3>
+                <div class="color-options">
+                    <button class="color-btn red" data-color="red">Red</button>
+                    <button class="color-btn yellow" data-color="yellow">Yellow</button>
+                    <button class="color-btn green" data-color="green">Green</button>
+                    <button class="color-btn blue" data-color="blue">Blue</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Messages -->
+        <div id="game-message" class="game-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
